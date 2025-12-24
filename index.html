@@ -1,0 +1,75 @@
+<div class="page">
+  <div class="heartsBg" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="heroText">
+      <div class="kicker">special gift for</div>
+      <h1>someone i love <span class="heart">💗</span></h1>
+      <p>Drag the pieces into the empty puzzle board.</p>
+    </div>
+
+    <div class="heroBtns">
+      <label class="pill">
+        upload photo
+        <input id="file" type="file" accept="image/*" hidden />
+      </label>
+
+      <button class="pill ghost" id="shuffleBtn" type="button">shuffle</button>
+
+      <div class="pill ghost selectPill">
+        <span>grid</span>
+        <select id="grid" aria-label="grid size">
+          <option value="3">3×3</option>
+          <option value="4" selected>4×4</option>
+          <option value="5">5×5</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="boardWrap">
+      <div class="boardFrame">
+        <div id="board" class="board" aria-label="Puzzle board"></div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <div class="polaroid">
+        <div class="polTitle">a little note</div>
+        <div class="polPhoto">
+          <img id="previewImg" alt="Preview" />
+        </div>
+        <div class="polCaption" id="noteText">
+          our love story is a puzzle — piece by piece, we complete it.
+        </div>
+      </div>
+
+      <div class="trayCard">
+        <div class="trayTitle">pieces</div>
+        <div id="tray" class="tray" aria-label="Pieces tray"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Drag layer so pieces can float above everything while dragging -->
+  <div id="dragLayer" class="dragLayer" aria-hidden="true"></div>
+
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+
+  <div id="reveal" class="reveal" hidden>
+    <div class="revealCard">
+      <div class="spark">✨</div>
+      <h3>completed.</h3>
+      <p class="msg">
+        you did it 🥺<br/>
+        <span id="customMsg">i love you — always.</span>
+      </p>
+      <button class="pill" id="again" type="button">play again</button>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <small>tip: square-ish photos look best.</small>
+  </footer>
+</div>
